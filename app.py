@@ -6,6 +6,10 @@ app = Flask(__name__)
 def home():
     return "Hello! Flask app deployed using Jenkins CI/CD."
 
+@app.route("/hello")
+def hello():
+    return "Hello from GitHub Webhook Demo!"
+
 @app.route("/health")
 def health():
     return jsonify({
